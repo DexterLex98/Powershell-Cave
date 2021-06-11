@@ -6,7 +6,7 @@ Get-Eventlog -LogName application -EntryType Error,Warning | Export-Csv -Path "$
 }
 
 function EventLogsDump_System($sysLogPath){
-Get-Eventlog -LogName System -EntryType Error,Warning,Information | Export-Clixml -Path "$($sysLogPath)\system_logs.csv"
+Get-Eventlog -LogName System -EntryType Error,Warning,Information | Export-Csv -Path "$($sysLogPath)\system_logs.csv"
 }
 function EventLogsDump_Security($secLogPath){
 Get-Eventlog -LogName Security -EntryType SuccessAudit,FailureAudit | Export-Csv -Path "$($secLogPath)\Security_logs.csv"
