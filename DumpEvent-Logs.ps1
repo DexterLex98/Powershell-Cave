@@ -16,8 +16,12 @@ function compress_files($compressPath){
 Compress-Archive -Path "$($compressPath)\*.csv" -DestinationPath "$($destinationPath)\EventLogs.zip"
 }
 
+function remove_logfiles($removePath){
+Remove-Item -Path "$($removePath)\*.csv"
+}
+
 EventLogsDump_App($savePath)
 EventLogsDump_System($savePath)
 EventLogsDump_Security($savePath)
 compress_files($savePath)
-
+remove_logfiles($savePath)
