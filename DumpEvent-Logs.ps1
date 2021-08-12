@@ -1,6 +1,20 @@
-
 param($savePath,$destinationPath)
+<#
+.SYNOPSIS
+Script which can be used for dumping event logs directly to a zip file in the provided path
 
+.PARAMETER savePath
+Directory where we want to save the temporary files
+
+.PARAMETER destinationPath
+Directory where the zip file will be saved
+
+.EXAMPLE
+
+PS> ./DumpEvent-Logs.ps1 -savePath C:\Users\Peter\AppData\Local\Temp -destinationPath D:\
+This will save the temporary files to Temp directory and once execution is done will produce the zip file in D: drive
+
+#>
 function EventLogsDump_App($appLogPath){
 Get-Eventlog -LogName application -EntryType Error,Warning | Export-Csv -Path "$($appLogPath)\application_logs.csv"
 }
