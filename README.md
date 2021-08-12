@@ -14,4 +14,4 @@ The above example demonstrates how to execute the script.
 - Note: **If you're having issue running the script run it using `powershell.exe -ExecutionPolicy bypass` the following will help user run scripts**
 
 ## Recommendation 
-Executing the script with administrator privs is preferred since some of the Logs are require the neccessary access
+Executing the script with administrator privs is preferred since some of the Logs require the neccessary premissions for access
