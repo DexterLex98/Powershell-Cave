@@ -1,6 +1,6 @@
 # DumpEvent-Logs - Powershell Cave
 
-Powershell Cave will currently having a single script which is targeted for windows related scripts.
+Powershell Cave is currently having a single script which is targeted for Windows.
 
 ## Lets talk about DumpEvent-Logs
 
